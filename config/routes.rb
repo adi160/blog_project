@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   root 'welcome#home'
 
-  resources :articles
+  resources :articles do 
+    resources :comments
+  end
 
   get 'about', to: 'welcome#about'
 
